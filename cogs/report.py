@@ -2490,7 +2490,7 @@ class report(commands.Cog):
 
     @commands.command()
     async def imoder(self, ctx, member: discord.Member = None):
-        if ctx.guild == None or ctx.guild.jd == 477547500232769536:
+        if ctx.guild == None or ctx.guild.id == 477547500232769536:
             return
 
         if not reports.count_documents({"guild_id": ctx.guild.id, "proverka": 1}) == 1:
