@@ -176,5 +176,5 @@ async def _bot(ctx):
     page = Paginator(bot, message, only=ctx.author, use_more=False, embeds=embeds, language="ru", footer_icon=bot.user.avatar_url, timeout=120, use_exit=True, delete_message=True, color=0xFB9E14, use_remove_reaction=True)
     await page.start()
 
-tokens = ('NzI5MzA5NzY1NDMxMzI4Nzk5.XwHEpQ.1zBVN3jJibhlToIbKyW4jXEaD3I')
+tokens = ('NzI5MzA5NzY1NDMxMzI4Nzk5.XwHEpQ.eC2EUwcEblO_HaoX5gCinF27XI8')
 bot.run(tokens)
