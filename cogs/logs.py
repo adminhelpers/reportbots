@@ -41,9 +41,6 @@ class logs(commands.Cog):
         if logged.count_documents({"guild_id": member.guild.id}) == 0:
             return
 
-        if reports.find_one({"guild_id": member.guild.id})["donate"] == 0:
-            return
-
         log = logged.find_one({"guild_id": member.guild.id})
 
         if log["voice"] == 0:
@@ -106,9 +103,6 @@ class logs(commands.Cog):
         if logged.count_documents({"guild_id": channel.guild.id}) == 0:
             return
 
-        if reports.find_one({"guild_id": channel.guild.id})["donate"] == 0:
-            return
-
         log = logged.find_one({"guild_id": channel.guild.id})
 
         if log["channels"] == 0:
@@ -137,9 +131,6 @@ class logs(commands.Cog):
             return
 
         if logged.count_documents({"guild_id": channel.guild.id}) == 0:
-            return
-        
-        if reports.find_one({"guild_id": channel.guild.id})["donate"] == 0:
             return
 
         log = logged.find_one({"guild_id": channel.guild.id})
@@ -172,9 +163,6 @@ class logs(commands.Cog):
         if logged.count_documents({"guild_id": role.guild.id}) == 0:
             return
 
-        if reports.find_one({"guild_id": role.guild.id})["donate"] == 0:
-            return
-
         log = logged.find_one({"guild_id": role.guild.id})
 
         if log["roleedit"] == 0:
@@ -201,9 +189,6 @@ class logs(commands.Cog):
             return
 
         if logged.count_documents({"guild_id": role.guild.id}) == 0:
-            return
-
-        if reports.find_one({"guild_id": role.guild.id})["donate"] == 0:
             return
 
         log = logged.find_one({"guild_id": role.guild.id})
@@ -234,9 +219,6 @@ class logs(commands.Cog):
             return
 
         if logged.count_documents({"guild_id": message.guild.id}) == 0:
-            return
-
-        if reports.find_one({"guild_id": message.guild.id})["donate"] == 0:
             return
 
         log = logged.find_one({"guild_id": message.guild.id})
@@ -272,9 +254,6 @@ class logs(commands.Cog):
         if logged.count_documents({"guild_id": after.guild.id}) == 0:
             return
 
-        if reports.find_one({"guild_id": after.guild.id})["donate"] == 0:
-            return
-
         log = logged.find_one({"guild_id": after.guild.id})
 
         if log["message"] == 0:
@@ -300,9 +279,6 @@ class logs(commands.Cog):
             return
 
         if logged.count_documents({"guild_id": after.guild.id}) == 0:
-            return
-
-        if reports.find_one({"guild_id": before.guild.id})["donate"] == 0:
             return
 
         log = logged.find_one({"guild_id": after.guild.id})
