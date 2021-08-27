@@ -38,7 +38,6 @@ async def get_prefix(bot, message):
     return reports.find_one({"guild_id": guildid, "proverka": 1})["prefix"]
 
 bot = commands.Bot(command_prefix = get_prefix, intents=intents)
-bot.load_extension('jishaku')
 bot.remove_command('help')
 
 def bytes2human(number, typer=None):
