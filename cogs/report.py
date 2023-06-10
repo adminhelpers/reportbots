@@ -39,7 +39,7 @@ def add(guild, member: discord.Member, arg):
 
 def setembed(text, url):
     embed = discord.Embed(description = f'{text}', colour=0xFB9E14)
-    embed.set_footer(text=f'Support Team by dollar ム baby#3603', icon_url = url)
+    embed.set_footer(text=f'Support Team by dollar ム baby#7641', icon_url = url)
 
     return embed
 
